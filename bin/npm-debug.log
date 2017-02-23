@@ -1,0 +1,19 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'link' ]
+2 info using npm@3.9.6
+3 info using node@v5.6.0
+4 verbose linkPkg /Users/qitmac000455/work/paycenter/schacker
+5 verbose stack Error: Package must have a name field to be linked
+5 verbose stack     at /usr/local/lib/node_modules/npm/lib/link.js:147:12
+5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+5 verbose stack     at handleExists (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:329:20)
+5 verbose stack     at FSReqWrap.cb [as oncomplete] (fs.js:216:19)
+6 verbose cwd /Users/qitmac000455/work/paycenter/schacker/bin
+7 error Darwin 15.2.0
+8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "link"
+9 error node v5.6.0
+10 error npm  v3.9.6
+11 error Package must have a name field to be linked
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
