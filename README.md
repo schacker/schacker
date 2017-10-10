@@ -1,10 +1,10 @@
 # schacker
-simple scaffold 初级版脚手架
+简单脚手架
 ## 使用
 ### 安装
-npm install
-then 项目根目录npm install
-then 全局使用npm link
+npm install schacker-cli -g
+项目根目录npm install
+全局使用npm link
 ### 1、schacker init
 初始化项目，根据提示填写相关参数
 ### 2、schacker add
