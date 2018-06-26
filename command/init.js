@@ -21,18 +21,26 @@ module.exports = () => {
         branch = config.tpl[tplName].branch
 
         // git命令，远程拉取项目并自定义项目名
-        let cmdStr = `git clone ${gitUrl} ${projectName} && cd ${projectName} && git checkout ${branch} && rm -rf .git/`
-
+        let cmdClone = `git clone ${gitUrl} ${projectName}`
+        let cmdInit = `cd ${projectName} && git checkout ${branch} && rm -rf .git/`
         console.log(chalk.white('\n Start generating...'))
 
-        exec(cmdStr, (error, stdout, stderr) => {
+        exec(cmdClone, (error, stdout, stderr) => {
           if (error) {
             console.log(error)
             process.exit()
           }
-          console.log(chalk.green('\n √ Generation completed!'))
-          console.log(`\n cd ${projectName} && npm install \n`)
+          console.log(chalk.green('\n √ generating...'))
           process.exit()
+        })
+        exec(cmdInit, (error, stdout, stderr) => {
+            if (error) {
+                console.log(error)
+                process.exit()
+            }
+            console.log(chalk.green('\n √ Generation completed!'))
+            console.log(`\n cd ${projectName} && npm install \n`)
+            process.exit()
         })
     })
 }
